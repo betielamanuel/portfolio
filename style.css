@@ -1,0 +1,91 @@
+body {
+    background-color: #7DE5B4;
+    font-family: monospace;
+    color: #fff;
+    display: flex;
+}
+main{
+    margin: auto;
+    margin-top: 200px;
+}
+.welcome-board {
+    text-align:center;
+    /* background-color: black; */
+    border:1px solid #DCF7F5;
+    background-color: #DCF7F5;
+    width: 600px;
+    height: 350px;
+    position: relative;
+    display: inline-block;
+    display: flex;
+    box-shadow: 10px 15px #099976;
+}
+
+/*dropdown button style
+on hover change the background color will be green and font color will be black*/
+.welcome-content button{
+    background-color: black;
+    color: #21cc85;
+    font-family: monospace;
+    font-size: large;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid ;
+}
+
+.welcome-content button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+/*on hover change the color to black and background to green*/
+.welcome-content button:hover {
+    background-color: #7DE5B4;
+    color: black;
+}
+/*dropdown content hidden by*/
+.dropdown-page-nav {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    }
+
+.dropdown-page-nav{
+    margin-top: 10px;
+    margin-left: 200px;
+}
+/*links inside dropdown-page-nav*/
+.dropdown-page-nav a {
+        color: #21cc85;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        background-color: black;
+    }
+
+/*on hover change background color of links*/
+.dropdown-page-nav a:hover {
+    background-color: #7DE5B4;
+    color: black;
+}
+.welcome-content{
+    background-color: black;
+    border: 1px solid black;
+    width: 590px;
+    height: 320px;
+    margin-top: 25px;
+    margin-left: 3px;
+}
+
+
+
+
+
+/*show dropdown menu on hover*/
+.welcome-content:hover .dropdown-page-nav {
+    display: block;
+}
