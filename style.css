@@ -1,5 +1,5 @@
 body {
-    background-color: #7DE5B4;
+    background-color: #390031;
     font-family: monospace;
     color: #fff;
     display: flex;
@@ -18,14 +18,14 @@ main{
     position: relative;
     display: inline-block;
     display: flex;
-    box-shadow: 10px 15px #099976;
+    box-shadow: 10px 15px #563351;
 }
 
 /*dropdown button style
 on hover change the background color will be green and font color will be black*/
 .welcome-content button{
     background-color: black;
-    color: #21cc85;
+    color: #459e79;
     font-family: monospace;
     font-size: large;
     margin-top: 10px;
@@ -34,7 +34,7 @@ on hover change the background color will be green and font color will be black*
 }
 
 .welcome-content button:active {
-    background-color: #3e8e41;
+    background-color: #18d81e;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
