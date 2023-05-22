@@ -21,6 +21,10 @@
         .contacts {
             margin: 10px;
         }
+
+        #home-btn{
+            position:relative;
+        }
     </style>
     <title>about</title>
     <link rel="stylesheet" href="style.css">
@@ -29,7 +33,14 @@
     <main>
         <div style="height:fit-content" class="welcome-board">
             <div style="overflow:scroll; padding:10px; margin-left: 1px;" class="welcome-content">
-                <button class="dropbtn">Hello World, welcome!</button>
+                <div id="home-btn">
+                    <div class="drop-btn">
+                        <button>Hello World, welcome!</button>
+                    </div>
+                    <div class="drop-btn">
+                        <a href="index.html"> <button>Home</button> </a>
+                    </div>
+                </div>
                 <div class="bio">
                     <p>I'm Betiel (Beh-tea-el), a junior web developer with a background in
                         Psychology. I'm passionate about the intersection of psychology and
@@ -47,7 +58,6 @@
                     <a href="https://github.com/betielamanuel"> <img src="github-logo.png" alt="github-logo"></a>
                     <a href="https://www.linkedin.com/in/betiel-amanuel/"> <img src="linkedin.png" alt="linkedin-logo"></a>
                 </div>
-                <a href="index.html"> <button>Home</button> </a>
             </div>
         </div>
     </main>   
