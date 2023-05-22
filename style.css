@@ -44,7 +44,7 @@ on hover change the background color will be green and font color will be black*
     background-color: #7DE5B4;
     color: black;
 }
-/*dropdown content hidden by*/
+/*dropdown content hidden*/
 .dropdown-page-nav {
     display: none;
     position: absolute;
@@ -72,6 +72,7 @@ on hover change the background color will be green and font color will be black*
     background-color: #7DE5B4;
     color: black;
 }
+
 .welcome-content{
     background-color: black;
     border: 1px solid black;
@@ -80,10 +81,6 @@ on hover change the background color will be green and font color will be black*
     margin-top: 25px;
     margin-left: 3px;
 }
-
-
-
-
 
 /*show dropdown menu on hover*/
 .welcome-content:hover .dropdown-page-nav {
