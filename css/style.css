@@ -86,3 +86,19 @@ on hover change the background color will be green and font color will be black*
 .welcome-content:hover .dropdown-page-nav {
     display: block;
 }
+
+table   {
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    border: 5px solid green;
+}
+
+th,td {
+    border: 1px solid white;
+}
+
+td:hover {
+    background-color: green;
+    color: white;
+}
