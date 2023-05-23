@@ -8,39 +8,91 @@
         h3 {
             color: #21cc85;
         }
+        /*This animation changes the skill boxes and h3 element*/
+        #skill-box,h3 {
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+            from {
+                background-color: #21cc85; color: black;
+                left: 0px; top: 0px;
+            }
+            to {
+                background-color: black; color: #21cc85;
+                left: 200px; top: 200px;
+            }
+        }
+
+        /*This styles the divs with skill set class name*/
+        #skill-box {
+            height: auto;
+            width: 100px;
+            padding-top: 15px;
+        }
+
+        /*basketball drippling css animation*/
+        @keyframes dribble {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(800px); }
+        100% { transform: translateY(0); }
+        }
+
+        .basketball img{
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        border-radius: 50%;
+        animation-name: dribble;
+        animation-duration: 3.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        }
+
+       
     </style>
     <title>Portfolio</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+     
     <main>
         <div class="welcome-board">
             <h1></h1>
             <div class="welcome-content">
                 <button class="dropbtn">Hello World, welcome!</button>
                 <div style="display:flex; padding: 20px; justify-content: center; justify-content: space-around; margin: 30px;" class="skill-list">
-                    <div>
+                    
+                    <div id="skill-box">
                         <img src="../media/html-5.png" alt="html-logo">
                         <h3>html</h3>
                     </div>
-                    <div>
+                    
+                    <div id="skill-box">
                         <img src="../media/css-3.png" alt="css-logo">
                         <h3>css</h3>
                     </div>
-                    <div>
+                    
+                    <div id="skill-box">
                         <img src="../media/js.png" alt="js-logo">
                         <h3>javascript</h3>
                     </div>
-                    <div>
+                    
+                    <div id="skill-box">
                         <img src="../media/react.png" alt="react-logo">
                         <h3>react</h3>
                     </div>
+
                 </div>
                 <div class="home-btn" style="margin-top: 50px;">
                     <a href="../html/welcome.html"> <button>Home</button> </a>
                 </div>
             </div>
         </div>
-    </main>   
+    </main>
+    <div class="basketball">
+        <img src="../media/basketball.png" alt="">
+    </div>
 </body>
 </html>
