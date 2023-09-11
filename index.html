@@ -3,27 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Betiel Amanuel Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
-        <ul>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+    <nav class="menu">
+        <button class="clickable-butt" id="myButton" href="#about">About</button>
+        <button class="clickable-butt" id="myButton" href="#skills">Skills</button>
+        <button class="clickable-butt" id="myButton" href="#projects">Projects</button>
+        <button class="clickable-butt" id="myButton" href="#contacts">Contacts</button>
+        <audio id="click-sound" preload="auto">
+            <source src="./assets/audio/button-click sound effect.mp3" type="audio/mpeg">
+        </audio>
     </nav>
-    <main class="container">
-        <!-- <hr class = "line-section"> -->
-        <div class="name-headline">
-            <h1>Betiel Amanuel</h1>
+    <main class="content">
+        <div class="glitch">
+            <div id="profile-container">
+                <img class="glitch-image" id="profile-image" src="./assets/img/cyber-profile.jpg" alt="" style="background-clip: content-box; background-color: transparent;">
+                <!-- <button id="learn-more-button">Learn more about me!</button> -->
+            </div>
+            <div class="glitch__layers">
+                <div class="glitch__layer"></div>
+                <div class="glitch__layer"></div>
+                <div class="glitch__layer"></div>
+            </div>
         </div>
-        <div class="typing-container">
-            <p id="typing-text"></p>
+        <div id="container">
+            <h1 id="betiel">Betiel Amanuel</h1>
+            <h1 id="betiel">Betiel Amanuel</h1>
+            <h1 id="betiel">Betiel Amanuel</h1>
         </div>
-        <img class="image-wrapper" src="./assets/img/betiel.png" alt="image of betiel amanuel posing">
+        <p id="text"></p>
+        <div class="star-wars">
+            <div class="crawl">
+                <p id="text-intro" style="color: #c7aeaee3;
+                font-size: 25px; text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
+                I'm a react developer who loves to create engaging web applications 
+                using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
+            </div>
+        </div>
     </main>
+
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </html>
