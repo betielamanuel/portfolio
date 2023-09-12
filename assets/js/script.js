@@ -84,3 +84,28 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
+// The cursor elements
+// create instance of kinet with custom settings
+let mouseCursor = document.querySelector('.cursor');
+let navLinks = document.querySelectorAll('.menu button');
+
+window.addEventListener('mousemove', cursor);
+function cursor(e) {
+    mouseCursor.style.top = e.pageY + 'px';
+    mouseCursor.style.left =  e.pageX + 'px';
+}
+
+navLinks.forEach(link => {
+    link.addEventListener('mouseleave', () =>{
+        mouseCursor.classList.remove("link-grow");
+        link.classList.remove('hovered-link');
+    });
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add("link-grow");
+        link.classList.add('hovered-link');
+    });
+});
+
+const run = () => {
+    console.log("Hello World");
+}

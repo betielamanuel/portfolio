@@ -371,7 +371,7 @@ h1:nth-child(3) {
 	right: 0;
 	top: 0;
 	bottom: 0;
-	background-image: url(/assets/img/cyber-profile.jpg);
+	background-image: url(/cyber-profile.c3088f70.jpg);
 	background-repeat: no-repeat;
 	background-position: 0 0;
   /* border-radius: 50%;*/
@@ -637,3 +637,6 @@ button:hover::after {
 #text-intro{
   font-size: 25px;
 }
+
+
+/*# sourceMappingURL=/style.a11e3109.css.map */
