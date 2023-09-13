@@ -5,59 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Betiel Amanuel Portfolio</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/index.scss">
+    <link rel="stylesheet" href="./assets/css/transition.css">
+    <!-- <link rel="stylesheet" href="./assets/css/index.scss"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- The cursor elements  -->
-    <div class="cursor"></div>
-    <!--  -->
-    <nav class="menu nav-links">
-        
-        <button class="clickable-butt" id="myButton" href="#about">About</button>
-        <button class="clickable-butt" id="myButton" href="#skills">Skills</button>
-        <button class="clickable-butt" id="myButton" href="#projects">Projects</button>
-        <button class="clickable-butt" id="myButton" href="#contacts">Contacts</button>
-        <audio id="click-sound" preload="auto">
-            <source src="./assets/audio/button-click sound effect.mp3" type="audio/mpeg">
-        </audio>
-    </nav>
-    <main>
-        <section class="home">
+    <div class="container">
+        <!-- The cursor elements  -->
+        <div class="cursor"></div>
+        <!--  The transition elements -->
+        <div class="menu nav-links">
             
-        </section>
-    </main>
-    <div class="content">
-        <div class="glitch">
-            <div id="profile-container">
-                <img class="glitch-image" id="profile-image" src="./assets/img/cyber-profile.jpg" alt="" style="background-clip: content-box; background-color: transparent;">
-                <!-- <button id="learn-more-button">Learn more about me!</button> -->
+            <button class="clickable-butt" id="myButton" onclick="window.location.href = 'index.html';">Home</button>
+            <button class="clickable-butt" id="myButton" onclick="window.location.href = 'about.html';">About</button>
+            <button class="clickable-butt" id="myButton" onclick="window.location.href = 'projects.html';">Projects</button>
+            <button class="clickable-butt" id="myButton" onclick="window.location.href = 'contacts.html';">Contacts</button>
+            <!-- <audio id="click-sound" preload="auto">
+                <source src="./assets/audio/button-click sound effect.mp3" type="audio/mpeg">
+            </audio> -->
+        </div>
+        
+        <div class="content">
+            <div class="glitch">
+                <div id="profile-container">
+                    <img class="glitch-image" id="profile-image" src="./assets/img/cyber-profile.jpg" alt="" style="background-clip: content-box; background-color: transparent;">
+                    <!-- <button id="learn-more-button">Learn more about me!</button> -->
+                </div>
+                <div class="glitch__layers">
+                    <div class="glitch__layer"></div>
+                    <div class="glitch__layer"></div>
+                    <div class="glitch__layer"></div>
+                </div>
             </div>
-            <div class="glitch__layers">
-                <div class="glitch__layer"></div>
-                <div class="glitch__layer"></div>
-                <div class="glitch__layer"></div>
+            <div id="container">
+                <h1 id="betiel">Betiel Amanuel</h1>
+                <h1 id="betiel">Betiel Amanuel</h1>
+                <h1 id="betiel">Betiel Amanuel</h1>
+            </div>
+            <p id="text"></p>
+            <div class="star-wars">
+                <div class="crawl">
+                    <p id="text-intro" style="color: #c7aeaee3;
+                    text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
+                    I'm a react developer with a background in psychology who loves to create engaging web applications 
+                    using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
+                </div>
             </div>
         </div>
-        <div id="container">
-            <h1 id="betiel">Betiel Amanuel</h1>
-            <h1 id="betiel">Betiel Amanuel</h1>
-            <h1 id="betiel">Betiel Amanuel</h1>
-        </div>
-        <p id="text"></p>
-        <div class="star-wars">
-            <div class="crawl">
-                <p id="text-intro" style="color: #c7aeaee3;
-                text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
-                I'm a react developer who loves to create engaging web applications 
-                using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
+        <!--  -->
+        <div class="landing-transition is-active"></div>
+        <div class="intro">
+            <div class="intro-text">
+                <h2 class="hide">
+                    <span class="text">Hello World!</span>
+                </h2>
+            </div>
+            <div class="intro-text">
+                <h2 class="hide">
+                    <span class="text">Welcome To My Page</span>
+                </h2>
+            </div>
+            <div class="intro-text">
+                <h2 class="hide">
+                    <span class="text"></span>
+                </h2>
             </div>
         </div>
-    </div>
-
+        <!-- <div class="slider"></div>     -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <script src="./assets/js/script.js"></script>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="./assets/js/script.js"></script>
 </html>

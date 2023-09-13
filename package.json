@@ -1,15 +1,5 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@dogstudio/highway": "^2.2.1",
-    "gsap": "^3.12.2"
+    "three": "^0.156.1"
   }
 }
