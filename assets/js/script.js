@@ -1,26 +1,3 @@
-window.onload = () => {
-    const transition_el = document.querySelector('.transition');
-    const anchors = document.querySelectorAll('a');
-
-    setTimeout(() =>{
-        transition_el.classList.remove('is-active');
-    }, 500);
-
-    for(let i = 0; i < anchors.length;i++){
-        const anchor = anchors[i];
-
-        anchor.addEventListener('click', e =>{
-            e.preventDefault();
-            let target = e.target.href;
-            // console.log(target);
-            transition_el.classList.add('is-active');
-
-            setTimeout(() => {
-                window.location.href = target;
-            }, 500)
-        });
-    }
-}
 
 
 
@@ -93,19 +70,19 @@ function typeText() {
 var typeTimer = setInterval(typeText, 100);
 
 // button sound effect
-document.addEventListener("DOMContentLoaded", function () {
-    // Get references to all buttons and the audio element
-    const buttons = document.querySelectorAll(".clickable-butt");
-    const audio = document.getElementById("click-sound");
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Get references to all buttons and the audio element
+//     const buttons = document.querySelectorAll(".clickable-butt");
+//     const audio = document.getElementById("click-sound");
 
-    // Add a click event listener to each button
-    buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-            // Play the audio when any button is clicked
-            audio.play();
-        });
-    });
-});
+//     // Add a click event listener to each button
+//     buttons.forEach((button) => {
+//         button.addEventListener("click", () => {
+//             // Play the audio when any button is clicked
+//             audio.play();
+//         });
+//     });
+// });
 
 // profile-botton image transtion
 // $(document).ready(function() {
@@ -137,10 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
+
+
+
 // The cursor elements
 // create instance of kinet with custom settings
 let mouseCursor = document.querySelector('.cursor');
-let navLinks = document.querySelectorAll('.menu button');
+let navLinks = document.querySelectorAll('.nav a');
 
 window.addEventListener('mousemove', cursor);
 function cursor(e) {

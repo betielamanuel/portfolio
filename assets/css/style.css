@@ -1,3 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'VT323', monospace; 
+  cursor: none;
+}
+
+/* scroll behavior */
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background: repeating-linear-gradient(
       0deg,
@@ -7,15 +19,39 @@ body{
       #171819 75%
   );
   background-size: 10px 10px;
-  border: 1px solid yellow;
+}
+
+section{
+  height: 100vh;
   width: auto;
-  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin: 5px;
-  padding: 5px;
-  font-family: 'VT323', monospace;
-  /* Crawl Effect */
-  overflow: hidden;
-  cursor: none;
+  scroll-snap-align: start;
+}
+
+.section-container{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-padding: 100px;
+}
+
+#one{
+  border: 1px solid blue;
+}
+
+#two{
+  border: 1px solid rgb(145, 255, 0);
+}
+
+#three{
+  border: 1px solid rgb(255, 0, 149);
+}
+
+#four{
+  border: 1px solid rgb(16, 215, 42);
 }
 
 /* Landing page transition */
@@ -60,14 +96,6 @@ background-size: 10px 10px;
 } 
 
 .landing-transition{
- background: repeating-linear-gradient(
-    0deg,
-    #0E0D0E 25%,
-    #0E0D0E 50%,
-    #171819 50%,
-    #171819 75%
-);
-background-size: 10px 10px; 
   position: fixed;
   top: 0;
   left: 0;
@@ -76,50 +104,13 @@ background-size: 10px 10px;
   z-index: 999;
   transform: translateY(100%);
   animation: glitch3 5.5s inherit;
-  animation: alternate-reverse;
 } 
 
-/* Page transition */
-
-
-/* .container{
-  animation: expand .8s ease forwards;
-  transition: all .8s ease;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateX(500px) scale(.2);
-  }
-  100% {
-    transform: translateX(0px) scale(1);
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(300px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-@keyframes expand {
-  0% {
-    transform: translateX(1400px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-} */
-
-/*  */
-.menu{
+nav{
   border:1px solid pink;
   width: auto;
-  height: 50px;
-  overflow: hidden;
+  height: 32px;
+  /* overflow: hidden; */
   background: none;
   display: flex;
   justify-content:center;
@@ -127,30 +118,6 @@ background-size: 10px 10px;
   margin: 5px;
   padding: 5px;
 }
-
-/* .menu {
-  color: #c7aeaee3;
-  font-size: 25px; 
-  text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f;
-  text-decoration: none;
-  border: 1px solid maroon;
-  width: auto;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin: 5px;
-  padding: 5px;
-} */
-
-/* .menu a:hover {
-  background-color: purple;
-  text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f
-} */
-
-/* .menu a.active {
-  background-color: purple;
-  text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f
-} */
 
 #text{
 color: #c7aeaee3;
@@ -167,32 +134,6 @@ text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f;
     border: 1px solid red;
     margin: 5px;
     padding: 5px;
-}
-
-
-/* img{
-  border: 1px solid purple;
-  margin: 10px;
-  padding: 10px;
-} */
-
-#text-name{
-    border: 1px solid saddlebrown;
-    margin: 10px;
-    padding: 10px;
-}
-/* Animation crawl */
-
-
-@keyframes crawl{
-  0%{
-    top: 0;
-    transform: rotate(20deg) translate(0);
-  }
-  100% {
-    top: -6000px;
-    transform: rotate(25deg) translate(-2500px);
-  }
 }
 
 #text-intro{
@@ -222,15 +163,14 @@ text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f;
 }
 
 /* glitch effect */ 
-
 #container {
   width: 70vw;
   margin: 20px;
   text-align: center;
   margin-left: 11 0px;
   /* border: 1px solid aqua; */
-  width: auto;
-  height: auto;
+  /* width: auto;
+  height: auto; */
   margin-left: 45px;
 }
 
@@ -568,9 +508,14 @@ h1:nth-child(3) {
 }
 
 /* glitch buttons */
-button, button::after {
+a{
+  text-align: center;
+  text-decoration: none;
+}
+
+a, a::after {
   width: 100%;
-  height: auto;
+  height: 100%;
   font-size: 25px;
   /* font-weight: 40px; */
   text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f;
@@ -585,7 +530,7 @@ button, button::after {
   position: relative;
 }
 
-button::after {
+a::after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -605,7 +550,7 @@ button::after {
   clip-path: var(--slice-0);
 }
 
-button:hover::after {
+a:hover::after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
@@ -657,43 +602,6 @@ button:hover::after {
   }
 }
 
-/* The cursor elements */
-/* .container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  cursor: none;
-}
-
-#circle{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: linear-gradient(45deg, transparent 5%, #42232a 5%);
-  border-radius: 50%;
-  pointer-events: none;
-  cursor: none;
-  padding: 5px;
-  margin: 5px;
-  z-index: 999;
-  /* border: 2px solid #c49b9be3; */
-  /* animation: flash 1s infinite;
-  box-shadow: 0 0 0 2px transparent, 0 0 0 2px gray;
-} */ 
-
-/* @keyframes flash {
-  0% {
-    opacity: 1; /* Fully visible */
-  /* } */
-  /* 50% { */
-    /* opacity: 0; Fully invisible */
-  /* } */
-  /* 100% { */
-    /* opacity: 1; Fully visible */
-  /* } */
-/* } */ 
-
-
 .cursor {
   width: 3rem;
   height: 3rem;
@@ -726,9 +634,7 @@ button:hover::after {
   position: relative;
   z-index: -3;
 }
-.clickable-butt{
-  cursor: none;
-}
+
 
 #text-intro{
   font-size: 25px;
