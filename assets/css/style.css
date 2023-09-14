@@ -5,6 +5,68 @@
   cursor: none;
 }
 
+/* project card */
+.card-container{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 1100px;
+  height: 500px;
+}
+
+.card-container h2, p{
+  color: #f16f6f;
+}
+
+.card-container .card{
+  max-width: 300px;
+  height: 215px;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+
+.card-container .card:hover{
+  height: 420px;
+}
+
+.card-container .card .imgB{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.card-container .card .imgB img{
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.card-container .card .card-content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.card-container .card:hover .card-content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
 /* scroll behavior */
 html{
   scroll-behavior: smooth;
@@ -44,6 +106,32 @@ section{
 
 #two{
   border: 1px solid rgb(145, 255, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+#two h2{
+  color: #c7aeaee3;
+  /* text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f; */
+  border: 1px solid royalblue;
+  padding: 5px;
+  margin: 5px;
+  font-size: 50px;
+}
+
+#two p{
+  border:1px solid #F8F005;
+  color: #c7aeaee3;
+  width: 1200px;
+  word-spacing: 2px;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  margin: 10px;
+  /* text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f; */
 }
 
 #three{
@@ -163,16 +251,6 @@ text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f;
 }
 
 /* glitch effect */ 
-#container {
-  width: 70vw;
-  margin: 20px;
-  text-align: center;
-  margin-left: 11 0px;
-  /* border: 1px solid aqua; */
-  /* width: auto;
-  height: auto; */
-  margin-left: 45px;
-}
 
 h1 {
   text-align: center;
