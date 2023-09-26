@@ -10,127 +10,239 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("gJQNg6gOJ-xNmjd6-");
+    })();
+    </script>
 </head>
 <body>
+    
+    <!-- The cursor elements  -->
+    <div class="cursor"></div>
+    <div class="landing-transition is-active"></div>
+    <div class="intro">
+        <div class="intro-text">
+            <h2 class="hide">
+                <span class="text">Hello World!</span>
+            </h2>
+        </div>
+        <div class="intro-text">
+            <h2 class="hide">
+                <span class="text">Welcome To My Page</span>
+            </h2>
+        </div>
+        <div class="intro-text">
+            <h2 class="hide">
+                <span class="text"></span>
+            </h2>
+        </div>
+    </div>
     <div class="section-container">
+        <nav class="nav" >
+            <a class="clickable-butt" href="#one">Home</a>
+            <a class="clickable-butt" href="#two"  >About</a>
+            <a class="clickable-butt" href="#three"  >Projects</a>
+            <a class="clickable-butt" href="#four"  >Contacts</a>
+            <!-- <audio id="click-sound" preload="auto">
+                <source src="./assets/audio/button-click sound effect.mp3" type="audio/mpeg">
+            </audio> -->
+        </nav>
 
         <section id="one">
-            <div class="content-container">
-                <!-- The cursor elements  -->
-                <div class="cursor"></div>
-                <!--  The transition elements -->
-                <nav class="nav" >
-                    <a class="clickable-butt" href="#one">Home</a>
-                    <a class="clickable-butt" href="#two"  >About</a>
-                    <a class="clickable-butt" href="#three"  >Projects</a>
-                    <a class="clickable-butt" href="#four"  >Contacts</a>
-                    <!-- <audio id="click-sound" preload="auto">
-                        <source src="./assets/audio/button-click sound effect.mp3" type="audio/mpeg">
-                    </audio> -->
-                </nav>
-                
-                <div class="content">
-                    <div class="glitch">
-                        <div id="profile-container">
-                            <img class="glitch-image" id="profile-image" src="./assets/img/cyber-profile.jpg" alt="" style="background-clip: content-box; background-color: transparent;">
-                        </div>
-                        <div class="glitch__layers">
-                            <div class="glitch__layer"></div>
-                            <div class="glitch__layer"></div>
-                            <div class="glitch__layer"></div>
-                        </div>
-                    </div>
-                    <div id="container">
-                        <h1 id="betiel">Betiel Amanuel</h1>
-                        <h1 id="betiel">Betiel Amanuel</h1>
-                        <h1 id="betiel">Betiel Amanuel</h1>
-                    </div>
-                    <p id="text"></p>
-                    <div class="star-wars">
-                        <div class="crawl">
-                            <p id="text-intro" style="color: #c7aeaee3;
-                            text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
-                            I'm a react developer with a background in psychology who loves to create engaging web applications 
-                            using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
-                        </div>
-                    </div>
+            <div class="content">
+                <div id="container">
+                    <h1 id="betiel">Betiel Amanuel</h1>
+                    <h1 id="betiel">Betiel Amanuel</h1>
+                    <h1 id="betiel">Betiel Amanuel</h1>
                 </div>
-                <!--  -->
-                <div class="landing-transition is-active"></div>
-                <div class="intro">
-                    <div class="intro-text">
-                        <h2 class="hide">
-                            <span class="text">Hello World!</span>
-                        </h2>
+                <p id="text"></p>
+                <div class="star-wars">
+                    <div class="crawl">
+                        <p id="text-intro" style="color: #c7aeaee3; font-size: 20px;
+                        text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
+                        I'm a react developer with a background in psychology who loves to create engaging web applications 
+                        using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
                     </div>
-                    <div class="intro-text">
-                        <h2 class="hide">
-                            <span class="text">Welcome To My Page</span>
-                        </h2>
-                    </div>
-                    <div class="intro-text">
-                        <h2 class="hide">
-                            <span class="text"></span>
-                        </h2>
-                    </div>
+                    <!-- scroll down animation -->
                 </div>
+            </div>
+            <div class="scroll">
+                <Div class ="scroll-animation"></Div>
+                <Div class ="scroll-animation"></Div>
+                <!-- <Div class ="scroll-animation"></Div> -->
+                <style>
+                    .scroll{
+                        margin-top: 70px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        /* border: 1px solid salmon; */
+
+                    }
+                    .scroll-animation{
+                        width: 25px; 
+                        height: 25px; 
+                        background-color: transparent ; 
+                        z-index: 80; 
+                        bottom: 25px; 
+                        position: absolute;   
+                        border-width: 0 0.25em 0.25em 0; 
+                        border-style: solid; 
+                        border-color: #ea7c7c8f; 
+                        /* border:  red; */
+                        animation: scrolldown 1.2s ease-in-out infinite 0.15s;
+                        position:sticky;
+                        left: 50%;
+                        transform: translateY(0%) rotate(45deg);
+                        opacity: 0;
+                        /* color: #c7aeaee3; */
+                    }
+
+                    @keyframes scrolldown {
+                        0%{
+                            transform: translateY(20%) rotate(45deg);
+                            opacity: 0.7;
+                        }
+                        50%{
+                            transform: translateY(0%) rotate(45deg);
+                            opacity: 0.2;
+                        }
+                        100%{
+                            transform: translateY(20%) rotate(45deg);
+                            opacity: 0.7;
+                        }
+                    }
+                </style>
+            </div>
+            <!--  -->
+            
         </section>
+
         <section id="two">
-            <h2>About Me</h2>
-            <p>As a psychology graduate, I have always been fascinated by how the human mind works and how we can leverage this knowledge to design better experiences for people.
-            I am also passionate about technology and the limitless possibilities it offers for creativity and innovation. </p>
-            
-            <p>Combining my interests in psychology and technology, I have found my niche in designing and building websites that are not only visually appealing but also user-friendly and intuitive. 
-            I believe that understanding human behavior and cognitive processes is key to creating digital products that truly meet people's needs and desires.</p>
-            
-            <p>Whether it's conducting user research, developing wireframes, or coding a website, I approach every project with a curious and analytical mindset, always striving to push the boundaries of what is possible. 
-            I am excited about the potential for technology to make a positive impact on people's lives, and I am eager to continue exploring the intersection of psychology and technology in my career.</p>
+            <div class="headline">
+                <h2>About Me</h2>
+            </div>
+            <div class="glitch">
+                <div id="profile-container">
+                    <img class="glitch-image" id="profile-image" src="./assets/img/cyber-profile.jpg" alt="" style="background-clip: content-box; background-color: transparent;">
+                </div>
+            </div>
+            <div class="two-paragraph">
+                <p>As a psychology graduate, I have always been fascinated by how the human mind works and how we can leverage this knowledge to design better experiences for people.
+                I am also passionate about technology and the limitless possibilities it offers for creativity and innovation. </p>
+                
+                <p>Combining my interests in psychology and technology, I have found my niche in designing and building websites that are not only visually appealing but also user-friendly and intuitive. 
+                I believe that understanding human behavior and cognitive processes is key to creating digital products that truly meet people's needs and desires.</p>
+                
+                <p>Whether it's conducting user research, developing wireframes, or coding a website, I approach every project with a curious and analytical mindset, always striving to push the boundaries of what is possible. 
+                I am excited about the potential for technology to make a positive impact on people's lives, and I am eager to continue exploring the intersection of psychology and technology in my career.</p>
+            </div>
+            <div class="about-me">
+            </div>
         </section>
+        
         <section id="three">
+            <div class="project-headline">
+                <h2>Projects</h2>
+            </div>
             <div class="card-container">
                 <div class="card">
                     <div class="imgB">
-                        <img src="./assets/img/todo.jpg" alt="">
+                        <img src="./assets/img/trashemtasks.gif" alt="">
                     </div>
                     <div class="card-content">
-                        <h2>Card One</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Illum labore exercitationem consectetur sint nisi voluptate molestiae autem, ut, sit, 
-                            recusandae debitis nostrum nulla alias eius reprehenderit quo aperiam praesentium porro.</p>
+                        <h2>Trash'Em Tasks!</h2>
+                        <p> Life is an ever ending task list ain't it? So, don't hoard'em tasks, trash'em tasks instead!</p>
+                        <p> This is a web app allows you to manage your task.
+                        You can give your task a name, add description, and organize it based on status. 
+                        Once you're done trash'em tasks and relief your task burdons!</p>
+                        <p>I built this app using HTML, CSS and mostly JavaScript</p>
+                        
+                        <div class="project-reference">
+                            <div class="github">
+                                <img src="./assets/img/githublogo.png" alt="github logo">
+                                <p>Github</p>
+                            </div>
+                            <div class="live-site">
+                                <img src="./assets/img/wepik-export-20230915052641nonH.jpeg" alt=" logo">
+                                <p>Live site</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Project two -->
                 <div class="card">
                     <div class="imgB"> 
-                        <img src="./assets/img/imagefinder.jpg" alt="">
+                        <img src="https://media.tenor.com/MOsNcnmidrEAAAAC/peach-cat-animated.gif" alt="">
                     </div>
                     <div class="card-content">
-                        <h2>Card Two</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Illum labore exercitationem consectetur sint nisi voluptate molestiae autem, ut, sit, 
-                            recusandae debitis nostrum nulla alias eius reprehenderit quo aperiam praesentium porro.</p>
+                        <h2>Purrrrfect Paws</h2>
+                        <p>Cats are undeniably the cutest creatures, and that's why I created Purrrrfect Paws. </p> 
+                        <p>Whether you're on the hunt for a new furry friend or simply want to immerse yourself in the fascinating world of felines, you've found the right website!</p>
+                        <p> My web application uses the power of the Cat API to fetch a wide array of cat breeds.</p>
+                        <div class="project-reference">
+                            <div class="github">
+                                <img src="./assets/img/githublogo.png" alt="github logo">
+                                <p>Github</p>
+                            </div>
+                            <div class="live-site">
+                                <img src="./assets/img/wepik-export-20230915052641nonH.jpeg" alt=" logo">
+                                <p>Live site</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="imgB">
-                        <img src="./assets/img/weather.jpg" alt="">
+                    <div class="imgB" >
+                        <img src="./assets/img/weather.gif" alt="">
                     </div>
                     <div class="card-content">
-                        <h2>Card Three</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                            Illum labore exercitationem consectetur sint nisi voluptate molestiae autem, ut, sit, 
-                            recusandae debitis nostrum nulla alias eius reprehenderit quo aperiam praesentium porro.</p>
+                        <h2>Ask Sky!</h2>
+                        <p>Ask Sky! is a weather app that I built primarily using JavaScript, React and Redux.</p>
+
+                        <p>I know that you might be thinking: "Another weather app?""
+                        But have you seen one where you can also add a remainder 
+                            while you look up the weather!</p>
+                        <p>Imagine, you may be inspired to go the beach today if it looks like it's going to be sunny, 
+                            so why not make the most of you weather checks and keep a record of your plans while you're at it!</p>
+                        <div class="project-reference">
+                            <div class="github">
+                                <img src="./assets/img/githublogo.png" alt="github logo">
+                                <p>Github</p>
+                            </div>
+                            <div class="live-site">
+                                <img src="./assets/img/wepik-export-20230915052641nonH.jpeg" alt=" logo">
+                                <p>Live site</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section id="four">
-            <h1>Contacts</h1>
+            <div class="form-container">
+                <h2>Contact Me!</h2>
+                <form>
+                    <input type="text" name="name"  id="name" placeholder= "name" required>
+                    <input type="email" name="email" id="email"  placeholder="email address" required>
+                    <textarea id="message" name="message" rows="10" placeholder="please write your message here..."></textarea>
+                        
+                    <button class="form-button" type="submit" onclick="sendMail()" >Send</button>
+                </form>
+            </div>
         </section>
     </div>
     
-        <!-- <div class="slider"></div>     -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" 
+    integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     <script src="./assets/js/script.js"></script>
+    
 </body>
 </html>

@@ -1,4 +1,26 @@
+//Contact form 
+function sendMail() {
+    var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+    };
 
+    const serviceID = "service_gn688d4";
+    const templateID = "template_gpiqoz1";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Your message sent successfully!!")
+
+    })
+    .catch(err=>console.log(err));
+
+}
 
 
 // Landing page transition
@@ -23,7 +45,7 @@ tl.to('.intro', {
 
 tl.fromTo('.clickable-butt', {opacity:0}, {opacity: 1, duration:1})
 tl.fromTo('.content', {opacity:0}, {opacity: 1, duration:0.5})
-// tl.fromTo('#container', {opacity:0}, {opacity: 1, duration:0.5})
+tl.fromTo('.scroll', {opacity:0}, {opacity: 1, duration:0.5})
 // tl.fromTo('#text', {opacity:0}, {opacity: 1, duration:0.5})
 // tl.fromTo('#text-intro', {opacity:0}, {opacity: 1, duration:0.5})
 
