@@ -45,6 +45,7 @@
         <nav class="nav" >
             <a class="clickable-butt" href="#one">Home</a>
             <a class="clickable-butt" href="#two"  >About</a>
+            <a class="clickable-butt" href="#skills"  >Skills</a>
             <a class="clickable-butt" href="#three"  >Projects</a>
             <a class="clickable-butt" href="#four"  >Contacts</a>
             <!-- <audio id="click-sound" preload="auto">
@@ -142,16 +143,76 @@
                 <p>Whether it's conducting user research, developing wireframes, or coding a website, I approach every project with a curious and analytical mindset, always striving to push the boundaries of what is possible. 
                 I am excited about the potential for technology to make a positive impact on people's lives, and I am eager to continue exploring the intersection of psychology and technology in my career.</p>
             </div>
-            <div class="about-me">
-            </div>
+            
+
+            
+            
         </section>
         
+        <!-- skills section -->
+
+        <section id="skills">
+            <h4 style="
+            color: #c7aeaee3;
+            text-shadow: 0px 0px 2px #c7aeaee3, 0px 0px 2px #f16f6f;
+            font-size: 35px;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 20px;
+            border-bottom: 2px solid #c7aeaee3;"
+            >My Skills</h4>
+            <div class="skills">
+
+                <!-- first-row-skills -->
+                <div class="first-row-skills">
+                    <div id="skill-box">
+                        <div class="image">
+                            <img src="./assets/img/html logo.png" alt="html-logo">
+                        </div>
+                        <h3>html</h3>
+                    </div>
+                    
+                    <div id="skill-box">
+                        <div class="image">
+                            <img src="./assets/img/css.png" alt="html-logo">
+                        </div>
+                        <h3>css</h3>
+                    </div>
+                    
+                    <div id="skill-box">
+                        <div class="image">
+                            <img src="./assets/img/bootstrap.png"  style="margin-left: 25px;" alt="html-logo">
+                        </div>
+                        
+                        <h3>bootstrap</h3>
+                    </div>
+                </div>
+
+                <!-- second-row-skills -->
+                <div class="second-row-skills">
+                    <div id="skill-box">
+                        <div class="image">
+                            <img src="./assets/img/javascript.png"  style="margin-left: 25px;" alt="html-logo">
+                        </div>
+                        <h3>javascript</h3>
+                    </div>
+                    <div id="skill-box">
+                        <div class="image">
+                            <img src="./assets/img/react.png" alt="html-logo">
+                        </div>
+                        
+                        <h3>react</h3>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
         <section id="three">
             <div class="project-headline">
                 <h2>Projects</h2>
             </div>
             <div class="card-container">
-                <div class="card">
+                <div class="card card-one">
                     <div class="imgB">
                         <img src="./assets/img/trashemtasks.gif" alt="">
                     </div>
@@ -176,15 +237,19 @@
                     </div>
                 </div>
                 <!-- Project two -->
-                <div class="card">
-                    <div class="imgB"> 
-                        <img src="https://media.tenor.com/MOsNcnmidrEAAAAC/peach-cat-animated.gif" alt="">
+                
+                <div class="card card-two">
+                    <div class="imgB" >
+                        <img src="./assets/img/weather.gif" alt="">
                     </div>
                     <div class="card-content">
-                        <h2>Purrrrfect Paws</h2>
-                        <p>Cats are undeniably the cutest creatures, and that's why I created Purrrrfect Paws. </p> 
-                        <p>Whether you're on the hunt for a new furry friend or simply want to immerse yourself in the fascinating world of felines, you've found the right website!</p>
-                        <p> My web application uses the power of the Cat API to fetch a wide array of cat breeds.</p>
+                        <h2>Ask Sky!</h2>
+                        <p>Ask Sky! is a weather app that I built primarily using JavaScript, React and Redux.</p>
+
+                        <p>I know that you might be thinking: "Another weather app?""
+                        But have you seen one where you can also add a remainder 
+                            while you look up the weather!</p>
+                        <p>So why not make the most of you weather checks and keep a record of your plans while you're at it!</p>
                         <div class="project-reference">
                             <div class="github">
                                 <img src="./assets/img/githublogo.png" alt="github logo">
@@ -197,19 +262,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
-                    <div class="imgB" >
-                        <img src="./assets/img/weather.gif" alt="">
+
+                <div class="card card-three">
+                    <div class="imgB"> 
+                        <img src="https://media.tenor.com/MOsNcnmidrEAAAAC/peach-cat-animated.gif" alt="">
                     </div>
                     <div class="card-content">
-                        <h2>Ask Sky!</h2>
-                        <p>Ask Sky! is a weather app that I built primarily using JavaScript, React and Redux.</p>
-
-                        <p>I know that you might be thinking: "Another weather app?""
-                        But have you seen one where you can also add a remainder 
-                            while you look up the weather!</p>
-                        <p>Imagine, you may be inspired to go the beach today if it looks like it's going to be sunny, 
-                            so why not make the most of you weather checks and keep a record of your plans while you're at it!</p>
+                        <h2>Purrrrfect Paws</h2>
+                        <p>Cats are undeniably the cutest creatures, and that's why I created Purrrrfect Paws. </p> 
+                        <p>Whether you're on the hunt for a new furry friend or simply want to immerse yourself in the fascinating world of felines, you've found the right website!</p>
+                        <p> My web application uses the power of the Cat API to fetch a wide array of cat breeds.</p>
                         <div class="project-reference">
                             <div class="github">
                                 <img src="./assets/img/githublogo.png" alt="github logo">
