@@ -63,8 +63,7 @@
                 <p id="text"></p>
                 <div class="star-wars">
                     <div class="crawl">
-                        <p id="text-intro" style="color: #c7aeaee3; font-size: 20px;
-                        text-shadow: 0px 0px 5px #c7aeaee3, 0px 0px 2px #f16f6f">
+                        <p id="text-intro">
                         I'm a react developer with a background in psychology who loves to create engaging web applications 
                         using a combination of HTML, CSS, JavaScript, React, and Redux. </p>
                     </div>
@@ -76,48 +75,7 @@
                 <Div class ="scroll-animation"></Div>
                 <!-- <Div class ="scroll-animation"></Div> -->
                 <style>
-                    .scroll{
-                        margin-top: 70px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-                        /* border: 1px solid salmon; */
-
-                    }
-                    .scroll-animation{
-                        width: 25px; 
-                        height: 25px; 
-                        background-color: transparent ; 
-                        z-index: 80; 
-                        bottom: 25px; 
-                        position: absolute;   
-                        border-width: 0 0.25em 0.25em 0; 
-                        border-style: solid; 
-                        border-color: #ea7c7c8f; 
-                        /* border:  red; */
-                        animation: scrolldown 1.2s ease-in-out infinite 0.15s;
-                        position:sticky;
-                        left: 50%;
-                        transform: translateY(0%) rotate(45deg);
-                        opacity: 0;
-                        /* color: #c7aeaee3; */
-                    }
-
-                    @keyframes scrolldown {
-                        0%{
-                            transform: translateY(20%) rotate(45deg);
-                            opacity: 0.7;
-                        }
-                        50%{
-                            transform: translateY(0%) rotate(45deg);
-                            opacity: 0.2;
-                        }
-                        100%{
-                            transform: translateY(20%) rotate(45deg);
-                            opacity: 0.7;
-                        }
-                    }
+                   
                 </style>
             </div>
             <!--  -->
@@ -152,38 +110,24 @@
         <!-- skills section -->
 
         <section id="skills">
-            <h4 style="
-            color: #c7aeaee3;
-            text-shadow: 0px 0px 2px #c7aeaee3, 0px 0px 2px #f16f6f;
-            font-size: 35px;
-            letter-spacing: 2px;
-            text-align: center;
-            margin: 20px;
-            border-bottom: 2px solid #c7aeaee3;"
-            >My Skills</h4>
+            <h2>My Skills</h2>
             <div class="skills">
 
                 <!-- first-row-skills -->
                 <div class="first-row-skills">
+
                     <div id="skill-box">
-                        <div class="image">
-                            <img src="./assets/img/html logo.png" alt="html-logo">
-                        </div>
+                        <img src="./assets/img/html logo.png" alt="html-logo">
                         <h3>html</h3>
                     </div>
                     
-                    <div id="skill-box">
-                        <div class="image">
-                            <img src="./assets/img/css.png" alt="html-logo">
-                        </div>
+                    <div id="skill-box">                      
+                        <img src="./assets/img/css.png" alt="css-logo">                      
                         <h3>css</h3>
                     </div>
                     
-                    <div id="skill-box">
-                        <div class="image">
-                            <img src="./assets/img/bootstrap.png"  style="margin-left: 25px;" alt="html-logo">
-                        </div>
-                        
+                    <div id="skill-box">                  
+                        <img src="./assets/img/bootstrap.png" class="bs"  alt="bootstrap-logo">                      
                         <h3>bootstrap</h3>
                     </div>
                 </div>
@@ -191,27 +135,27 @@
                 <!-- second-row-skills -->
                 <div class="second-row-skills">
                     <div id="skill-box">
-                        <div class="image">
-                            <img src="./assets/img/javascript.png"  style="margin-left: 25px;" alt="html-logo">
-                        </div>
+                        <img src="./assets/img/javascript.png" class="js" alt="html-logo">
                         <h3>javascript</h3>
                     </div>
+
                     <div id="skill-box">
-                        <div class="image">
-                            <img src="./assets/img/react.png" alt="html-logo">
-                        </div>
-                        
+                        <img src="./assets/img/react.png" alt="html-logo">
                         <h3>react</h3>
                     </div>
                 </div>
             </div> 
+
         </section>
 
         <section id="three">
             <div class="project-headline">
                 <h2>Projects</h2>
             </div>
+            
             <div class="card-container">
+
+                <!-- Project one -->
                 <div class="card card-one">
                     <div class="imgB">
                         <img src="./assets/img/trashemtasks.gif" alt="">
@@ -236,8 +180,8 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Project two -->
-                
                 <div class="card card-two">
                     <div class="imgB" >
                         <img src="./assets/img/weather.gif" alt="">
@@ -263,6 +207,7 @@
                     </div>
                 </div>
 
+                <!-- Project three -->
                 <div class="card card-three">
                     <div class="imgB"> 
                         <img src="https://media.tenor.com/MOsNcnmidrEAAAAC/peach-cat-animated.gif" alt="">
